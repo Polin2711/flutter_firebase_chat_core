@@ -1,79 +1,257 @@
-<br>
+# Las Empoderás - Plataforma Social
 
-<p align="center">
-  <a href="https://flyer.chat">
-    <img src="https://flyer.chat/assets/logo-dark.svg" width="288px" alt="Flyer Chat logo" />
-  </a>
-</p>
+Una plataforma web completa para el grupo "Las Empoderás" que incluye chat en tiempo real, sistema de perfiles de usuario y jerarquía de rangos militares.
 
-<h1 align="center">Flutter Firebase Chat Core</h1>
+## 🚀 Características Principales
 
-<p align="center">
-  Actively maintained, community-driven Firebase BaaS for chat applications with an optional <a href="https://pub.dev/packages/flutter_chat_ui">chat UI</a>.
-</p>
+### 💬 Chat en Tiempo Real
+- Chat grupal visible inmediatamente al acceder
+- Interfaz intuitiva y responsive
+- Sistema de notificaciones para mensajes nuevos
+- Indicadores de usuarios escribiendo
+- Lista de usuarios en línea
 
-<br>
+### 👤 Sistema de Perfiles
+- Perfil personalizable para cada miembro
+- Información personal editable
+- Visualización del rango actual con insignia
+- Historial de actividad
 
-<p align="center">
-  🇺🇦🇺🇦 We are Ukrainians. If you enjoy our work, please <a href="https://u24.gov.ua">consider donating</a> to help save our country. 🇺🇦🇺🇦
-</p>
+### 🎖️ Sistema de Rangos Militares
+- Jerarquía completa desde Soldado Raso hasta General del Ejército
+- 17 rangos diferentes con iconos únicos
+- Visualización del rango en el chat y perfil
+- Descripción de requisitos y privilegios para cada rango
 
-<br>
+### 📱 Navegación Móvil
+- Bottom bar con navegación intuitiva
+- Chat, Perfil, Diccionario (SOON), y Rangos
+- Diseño responsive para todos los dispositivos
 
-<p align="center">
-  ⚠️⚠️ Recommended for small or PoC projects, might not be optimized for large amounts of data. I suggest to use this on a free Spark plan, otherwise be extremely cautious. ⚠️⚠️
-</p>
+## 🛠️ Tecnologías Utilizadas
 
-<br>
+### Backend
+- **Node.js** con Express.js
+- **MongoDB** con Mongoose
+- **Socket.io** para chat en tiempo real
+- **JWT** para autenticación
+- **bcryptjs** para encriptación de contraseñas
 
-<p align="center">
-  <a href="https://pub.dartlang.org/packages/flutter_firebase_chat_core">
-    <img alt="Pub" src="https://img.shields.io/pub/v/flutter_firebase_chat_core" />
-  </a>
-  <a href="https://github.com/flyerhq/flutter_firebase_chat_core/actions?query=workflow%3Abuild">
-    <img alt="Build Status" src="https://github.com/flyerhq/flutter_firebase_chat_core/workflows/build/badge.svg" />
-  </a>
-  <a href="https://www.codefactor.io/repository/github/flyerhq/flutter_firebase_chat_core">
-    <img alt="CodeFactor" src="https://www.codefactor.io/repository/github/flyerhq/flutter_firebase_chat_core/badge" />
-  </a>
-</p>
+### Frontend
+- **React** con TypeScript
+- **Material-UI** para componentes de interfaz
+- **Socket.io-client** para conexión en tiempo real
+- **Axios** para peticiones HTTP
+- **React Router** para navegación
 
-<br>
+## 📋 Rangos Militares Implementados
 
-<p align="center">
-  <a href="https://flyer.chat">
-    <img alt="Chat Image" src="https://user-images.githubusercontent.com/14123304/193468140-91942302-2332-4cb1-8504-61b8892d828b.jpg" />
-  </a>
-</p>
+1. **Soldado Raso** 🪖 - Rango inicial
+2. **Soldado de Primera** 🎖️ - Con experiencia básica
+3. **Cabo** ⭐ - Líder de equipo
+4. **Cabo Primero** 🌟 - Cabo con experiencia avanzada
+5. **Sargento** 🏅 - Líder de pelotón
+6. **Sargento Primero** 🎖️ - Responsabilidades de sección
+7. **Brigada** 🏆 - Líder de compañía
+8. **Subteniente** 🥇 - Oficial subalterno
+9. **Teniente** 👑 - Oficial con mando medio
+10. **Capitán** 👑 - Oficial superior
+11. **Comandante** 👑 - Oficial superior de batallón
+12. **Teniente Coronel** 👑 - Oficial superior de regimiento
+13. **Coronel** 👑 - Oficial superior de brigada
+14. **General de Brigada** 👑 - General de división
+15. **General de División** 👑 - General de cuerpo de ejército
+16. **Teniente General** 👑 - General de ejército
+17. **General del Ejército** 👑 - Rango más alto
 
-<br>
+## 🚀 Instalación y Configuración
 
-Flyer Chat is a platform for creating in-app chat experiences using Flutter or [React Native](https://github.com/flyerhq/react-native-firebase-chat-core). This repository contains Firebase BaaS implementation for Flutter. We are also working on our more advanced SaaS and self-hosted solutions.
+### Prerrequisitos
+- Node.js (v14 o superior)
+- MongoDB (local o en la nube)
+- npm o yarn
 
-* **Free, open-source and community-driven**. We offer no paid plugins and strive to create an easy-to-use, almost drop-in chat experience for any application. Contributions are more than welcome! Please read our [Contributing Guide](CONTRIBUTING.md).
+### 1. Clonar el Repositorio
+```bash
+git clone <repository-url>
+cd las-empoderas-platform
+```
 
-* **Chat UI agnostic**. You can choose the chat UI you prefer. But if you don't have one, we provide our own free and open-source [Flutter Chat UI](https://pub.dev/packages/flutter_chat_ui), which can be used to create a working chat in minutes.
+### 2. Instalar Dependencias del Backend
+```bash
+npm install
+```
 
-* **Easy to use**. Returns streams of data for messages, rooms and users. [Firebase Security Rules](https://firebase.google.com/docs/rules) control access to the data. Check our [documentation](https://docs.flyer.chat/flutter/firebase/firebase-overview) for the info.
+### 3. Instalar Dependencias del Frontend
+```bash
+cd client
+npm install
+cd ..
+```
 
-## Getting Started
+### 4. Configurar Variables de Entorno
+```bash
+# Copiar archivo de ejemplo
+cp .env.example .env
 
-### Requirements
+# Editar .env con tus configuraciones
+MONGODB_URI=mongodb://localhost:27017/las-empoderas
+JWT_SECRET=tu-clave-secreta-jwt
+PORT=5000
+NODE_ENV=development
+CLIENT_URL=http://localhost:3000
+```
 
-`Dart >=2.19.0` and `Flutter >=3.0.0`, [Firebase](https://firebase.google.com) project.
+### 5. Inicializar la Base de Datos
+```bash
+# Ejecutar script para crear rangos militares
+node scripts/initRanks.js
+```
 
-Read our [documentation](https://docs.flyer.chat/flutter/firebase/firebase-overview) or see the [example](https://github.com/flyerhq/flutter_firebase_chat_core/tree/main/example) project. To run the example project you need to have your own [Firebase](https://firebase.google.com) project and then follow steps 1 and 2 of [Add Firebase to your Flutter app](https://firebase.google.com/docs/flutter/setup), override `firebase_options.dart`, don't commit it though 😉
+### 6. Ejecutar la Aplicación
 
-After all of this is done you will need to register a couple of users and the example app will automatically suggest email and password on the register screen, default password is `Qawsed1-`. To set up [Firebase Security Rules](https://firebase.google.com/docs/rules) so users can see only the data they should see, continue with our [documentation](https://docs.flyer.chat/flutter/firebase/firebase-rules).
+#### Desarrollo
+```bash
+# Terminal 1 - Backend
+npm run dev
 
-## Contributing
+# Terminal 2 - Frontend
+npm run client
+```
 
-Please read our [Contributing Guide](CONTRIBUTING.md) before submitting a pull request to the project.
+#### Producción
+```bash
+# Construir frontend
+npm run build
 
-## Code of Conduct
+# Ejecutar servidor
+npm start
+```
 
-Flyer Chat has adopted the [Contributor Covenant](https://www.contributor-covenant.org) as its Code of Conduct, and we expect project participants to adhere to it. Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+## 📁 Estructura del Proyecto
 
-## License
+```
+las-empoderas-platform/
+├── client/                 # Frontend React
+│   ├── src/
+│   │   ├── components/     # Componentes reutilizables
+│   │   ├── contexts/       # Contextos de React
+│   │   ├── pages/          # Páginas de la aplicación
+│   │   ├── services/       # Servicios de API y Socket
+│   │   ├── types/          # Tipos TypeScript
+│   │   └── App.tsx         # Componente principal
+│   └── package.json
+├── models/                 # Modelos de MongoDB
+├── routes/                 # Rutas de la API
+├── middleware/             # Middleware personalizado
+├── scripts/                # Scripts de utilidad
+├── server.js              # Servidor principal
+└── package.json
+```
 
-Licensed under the [Apache License, Version 2.0](LICENSE)
+## 🔧 API Endpoints
+
+### Autenticación
+- `POST /api/auth/register` - Registro de usuario
+- `POST /api/auth/login` - Inicio de sesión
+- `GET /api/auth/me` - Obtener usuario actual
+- `POST /api/auth/logout` - Cerrar sesión
+
+### Usuarios
+- `GET /api/users` - Obtener todos los usuarios
+- `GET /api/users/:id` - Obtener usuario por ID
+- `PUT /api/users/profile` - Actualizar perfil
+- `GET /api/users/online/list` - Usuarios en línea
+
+### Chat
+- `GET /api/chat/messages` - Obtener mensajes
+- `POST /api/chat/messages` - Enviar mensaje
+- `PUT /api/chat/messages/:id` - Editar mensaje
+- `DELETE /api/chat/messages/:id` - Eliminar mensaje
+
+### Rangos
+- `GET /api/ranks` - Obtener todos los rangos
+- `GET /api/ranks/:id` - Obtener rango por ID
+- `GET /api/ranks/:id/users` - Usuarios por rango
+- `GET /api/ranks/stats/overview` - Estadísticas de rangos
+
+## 🔒 Seguridad
+
+- Autenticación JWT con tokens seguros
+- Encriptación de contraseñas con bcrypt
+- Validación y sanitización de entradas
+- Rate limiting para prevenir abuso
+- CORS configurado para seguridad
+- Helmet.js para headers de seguridad
+
+## 📱 Características Móviles
+
+- Diseño responsive con Material-UI
+- Bottom navigation bar
+- Interfaz optimizada para touch
+- Soporte para PWA (Progressive Web App)
+
+## 🚀 Despliegue
+
+### Heroku
+```bash
+# Instalar Heroku CLI
+# Crear aplicación
+heroku create las-empoderas-platform
+
+# Configurar variables de entorno
+heroku config:set MONGODB_URI=tu-mongodb-uri
+heroku config:set JWT_SECRET=tu-jwt-secret
+
+# Desplegar
+git push heroku main
+```
+
+### Docker
+```bash
+# Construir imagen
+docker build -t las-empoderas-platform .
+
+# Ejecutar contenedor
+docker run -p 5000:5000 las-empoderas-platform
+```
+
+## 🤝 Contribución
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👥 Equipo de Desarrollo
+
+- **Desarrollador Principal**: [Tu Nombre]
+- **Diseño UI/UX**: [Diseñador]
+- **Backend**: [Desarrollador Backend]
+
+## 📞 Soporte
+
+Para soporte técnico o preguntas sobre el proyecto:
+- Email: soporte@lasempoderas.com
+- Discord: [Servidor de Discord]
+- GitHub Issues: [Repositorio Issues]
+
+## 🔮 Roadmap Futuro
+
+- [ ] Sistema de notificaciones push
+- [ ] Chat privado entre usuarios
+- [ ] Sistema de eventos y calendario
+- [ ] Integración con redes sociales
+- [ ] App móvil nativa
+- [ ] Sistema de logros y badges
+- [ ] Modo oscuro
+- [ ] Internacionalización (i18n)
+
+---
+
+**Las Empoderás** - Empoderando a través de la tecnología y la comunidad 💪
